@@ -1,0 +1,30 @@
+dot(nodesG, edgesG, nodesR, edgesR, edges, nodes) ::=<<
+@startuml
+digraph G {
+    ranksep=.25;
+    edge[arrowsize=.5];
+    node[shape=circle, fontname="ArialNarrow",
+        fontsize=12, fixedsize=true, height=.45];
+    <nodesG:{ item | <item>[color="green"];}>
+    <nodes:{item|<item>;}>
+    <nodesR:{ item | <item>[color="red"];}>
+    <edges.keys:{item| <E(edges, item)>}; separator="\n">
+    <edgesG.keys:{item| <greenE(edgesG, item)>}; separator="\n">
+    <edgesR.keys:{item| <redE(edgesR, item)>}; separator="\n">
+}
+@enduml
+>>
+
+greenE(edges, item) ::=<<
+<edges.(item): {k|<item> -> <k>[color="green"];};separator="\n">
+>>
+
+redE(edges, item) ::=<<
+<edges.(item): {k|<item> -> <k>[color="red"];};separator="\n">
+>>
+
+E(edges, item) ::=<<
+<edges.(item): {k|<item> -> <k>;};separator="\n">
+>>
+
+
