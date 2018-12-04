@@ -1,0 +1,30 @@
+@startuml
+digraph G {
+    ranksep=.25;
+    edge[arrowsize=.5];
+    node[shape=circle, fontname="ArialNarrow",
+        fontsize=12, fixedsize=true, height=.45];
+    add[color="green"];add2[color="green"];ggT[color="green"];
+    main;binomi;add;add2;summe;fibo;
+    summe[color="red"];fact[color="red"];fibo[color="red"];
+    main -> summe;
+    main -> fibo;
+    main -> ggT;
+    main -> binomi;
+    binomi -> fact;
+    binomi -> fact;
+    binomi -> fact;
+    add -> identity;
+    add2 -> identity;
+    summe -> add2;
+    fibo -> add;
+    add -> add[color="green"];
+    add2 -> add2[color="green"];
+    ggT -> ggT[color="green"];
+    ggT -> ggT[color="green"];
+    summe -> summe[color="red"];
+    fact -> fact[color="red"];
+    fibo -> fibo[color="red"];
+    fibo -> fibo[color="red"];
+}
+@enduml
