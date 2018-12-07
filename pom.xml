@@ -11,6 +11,7 @@
     <modules>
         <module>aufgabe4</module>
         <module>aufgabe5</module>
+        <module>aufgabe6</module>
     </modules>
 
     <dependencies>
